@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { HeadFC, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import {Seo} from "../components/seo"
@@ -26,6 +26,9 @@ const AboutPage = () => (
 
 export default AboutPage
 
-export const Head = () => (
-    <Seo title="About Gatsby Bootsrap 5 starter" />
-)
+// export const Head = () => (
+//     <Seo title="About Gatsby Bootsrap 5 starter" />
+// )
+
+// below is Gatsby built-in Head API which replaces  react-helmet
+export const Head: HeadFC = () => <title>About</title>
